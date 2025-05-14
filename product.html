@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">ShopEasy</a></div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#products">Products</a>
+        </nav>
+        <div class="header-right">
+            <div class="cart-icon">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail" id="product-detail">
+        <div id="loading">Loading product details...</div>
+        <div id="product-info" class="product-info">
+            <div class="product-images">
+                <img id="product-main-image" src="" alt="Product Image" />
+            </div>
+            <div class="product-details">
+                <h3 class="product-title" id="product-title"></h3>
+                <p class="product-price" id="product-price"></p>
+                <p class="product-description" id="product-description"></p>
+                <button id="add-to-cart-btn" disabled>Loading...</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

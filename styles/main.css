@@ -155,14 +155,27 @@ body {
     text-align: center;
 }
 
-.product-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+/* Remove link underline and blue color from product titles */
+.product-card a {
+    text-decoration: none;
+    color: inherit;
 }
 
+/* Responsive, clean product title - SMALLER */
+.product-title {
+    font-size: clamp(0.8rem, 1vw + 0.3rem, 1rem);
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.2;
+}
+
+/* Product price styling */
 .product-price {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
+    color: green;
+    font-weight: bold;
 }
 
 .add-to-cart {
@@ -192,7 +205,6 @@ body {
     color: #444;
     margin: 10px 0;
 }
-
 
 /* Animation */
 @keyframes fadeIn {
@@ -232,6 +244,12 @@ body {
     }
 
     .hero p {
+        font-size: 1rem;
+    }
+    .product-title {
+        font-size: 1rem;
+    }
+    .product-price {
         font-size: 1rem;
     }
 }
@@ -303,4 +321,84 @@ body {
 }
 .checkout-btn:hover {
     background: #d19b3e;
+}
+/* Product Detail Section */
+.product-detail {
+    padding: 50px 30px;
+    background-color: #fff;
+}
+
+.product-info {
+    display: flex;
+    gap: 30px;
+}
+
+.product-images {
+    width: 50%;
+}
+
+.product-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-details {
+    width: 50%;
+}
+
+.product-detail .product-title {
+    font-size: clamp(0.95rem, 1.3vw + 0.4rem, 1.15rem);
+    margin-bottom: 15px;
+}
+
+.product-detail .product-price {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: green;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #f0c040;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-to-cart-btn:hover {
+    background-color: #d19b3e;
+}
+@media (max-width: 768px) {
+    .product-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-images img {
+        width: 100%;
+    }
+
+    .product-details {
+        width: 100%;
+    }
+
+    .product-detail .product-title {
+        font-size: 1rem;
+    }
+
+    .product-detail .product-price {
+        font-size: 1rem;
+    }
+
+    .product-description {
+        font-size: 1rem;
+    }
 }
